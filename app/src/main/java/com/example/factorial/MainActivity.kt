@@ -1,0 +1,36 @@
+package com.example.factorial
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+
+        var word : EditText = findViewById(R.id.Name)
+
+        var rev : TextView = findViewById(R.id.View)
+
+        var but : Button =findViewById(R.id.button)
+
+        but.setOnClickListener {
+
+            var wordd = word.text.toString()
+
+
+            var ans = wordd.reversed()
+
+            rev.text = "$ans"
+
+
+
+
+        }
+
+    }
+}
